@@ -51,6 +51,19 @@ const CONFIG = {
 };
 
 /**
+ * Bot用アバター要素を生成
+ */
+function createBotAvatar() {
+  const avatar = document.createElement("div");
+  avatar.className = "avatar avatar--bot";
+  const img = document.createElement("img");
+  img.src = "./tanbo.png";
+  img.alt = "Bot アイコン";
+  avatar.appendChild(img);
+  return avatar;
+}
+
+/**
  * @param {"bot" | "user"} who
  * @param {string} text
  */
@@ -59,9 +72,7 @@ function appendMessage(who, text) {
   row.className = `row row--${who}`;
 
   if (who === "bot") {
-    const avatar = document.createElement("div");
-    avatar.className = "avatar avatar--bot";
-    avatar.textContent = "Bot";
+    const avatar = createBotAvatar();
     row.appendChild(avatar);
   }
 
@@ -125,9 +136,7 @@ function renderOptions(scenario, options) {
         const row = document.createElement("div");
         row.className = "row row--bot";
 
-        const avatar = document.createElement("div");
-        avatar.className = "avatar avatar--bot";
-        avatar.textContent = "Bot";
+        const avatar = createBotAvatar();
         row.appendChild(avatar);
 
         const a = document.createElement("a");
