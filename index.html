@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="サービス依頼の受付チャットページ" />
+    <title>依頼受付チャット</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app" aria-label="依頼受付チャット">
+      <header class="topbar">
+        <div class="topbar__title">依頼受付</div>
+        <div class="topbar__subtitle">ボタンで選択してください</div>
+      </header>
+
+      <section class="chat" aria-live="polite" aria-label="チャット">
+        <div id="chatLog" class="chat__log" role="log" aria-label="メッセージ一覧"></div>
+      </section>
+
+      <section class="composer" aria-label="選択肢">
+        <div id="choices" class="composer__choices" role="group" aria-label="回答ボタン"></div>
+      </section>
+    </main>
+
+    <script src="./chat.js" defer></script>
+  </body>
+</html>
