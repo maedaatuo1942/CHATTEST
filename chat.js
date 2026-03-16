@@ -7,7 +7,7 @@ const SCENARIO = {
   start: "step1",
   nodes: {
     step1: {
-      botText: "こんにちは！いま花粉症で鼻水で大洪水です！依頼受付ページです。ご用件を選んでください。",
+      botText: "こんにちは！いま花粉症で鼻水大洪水です！依頼受付ページです。ご用件を選んでください。",
       options: [
         { text: "依頼をしたい", next: "step2a" },
         { text: "まだ検討中", next: "step2b" },
